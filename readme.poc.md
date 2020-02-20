@@ -2,27 +2,26 @@
 
 > Values
 ``` yaml
-azure: true
+azure: false
 powershell: true
 license-header: MICROSOFT_MIT_NO_VERSION
 metadata:
   authors: Microsoft Corporation
   owners: Microsoft Corporation
-  description: 'Microsoft Azure PowerShell: $(service-name) cmdlets'
+  description: 'Microsoft Graph PowerShell: Users.Mail cmdlets'
   copyright: Microsoft Corporation. All rights reserved.
-  tags: Azure ResourceManager ARM PSModule $(service-name)
   companyName: Microsoft Corporation
   requireLicenseAcceptance: true
   licenseUri: https://aka.ms/azps-license
-  projectUri: https://github.com/Azure/azure-powershell
+  projectUri: https://github.com/Graph/Graph-powershell
 ```
 
 > Names
 ``` yaml
-prefix: Az
-subject-prefix: $(service-name)
-module-name: $(prefix).$(service-name)
-namespace: Microsoft.Azure.PowerShell.Cmdlets.$(service-name)
+prefix: Mg
+subject-prefix: Users.Mail
+module-name: $(prefix).Users.Mail
+namespace: Microsoft.Graph.PowerShell.Cmdlets.Users.Mail
 ```
 
 > Folders
@@ -33,8 +32,12 @@ output-folder: .
 
 > Profiles
 ``` yaml
+tag: all-api-versions
 require: $(this-folder)/profiles/readme.md
-profile:
+api-version:
   - v1.0
   - beta
+profile:
+  - beta-profile
+  - v1.0-profile
 ```
