@@ -29,9 +29,10 @@ In this directory, run AutoRest:
 > see https://aka.ms/autorest
 
 ``` yaml
-input-file:
-  - ..\specs\beta\Users.Mail.yml
-  - ..\specs\v1.0\Users.Mail.yml
+# input-file:
+#   - ..\specs\beta\virtualNetwork.yml
+#   - ..\specs\v1.0\virtualNetwork.yml
+  
 require:
   - ..\readme.poc.md
 
@@ -39,3 +40,7 @@ title: Users.Mail
 subject-prefix: ''
 module-version: 0.0.2
 make-sub-resources-byreference: true
+
+directive:
+  - no-inline: 
+    - IPConfiguration
