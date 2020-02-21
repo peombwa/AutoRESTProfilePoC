@@ -20,7 +20,6 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: user
-        - $ref: '#/components/parameters/ApiVersionParameter'
       responses:
         '200':
           description: Retrieved navigation property
@@ -51,7 +50,6 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: user
-        - $ref: '#/components/parameters/ApiVersionParameter'
       responses:
         '200':
           description: Retrieved navigation property
@@ -206,14 +204,6 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/odata.error'
-  parameters:
-    ApiVersionParameter:
-      name: api-version
-      in: query
-      required: true
-      schema:
-        type: string
-      description: MS Graph API version.
   securitySchemes:
     azureaadv2:
       type: oauth2

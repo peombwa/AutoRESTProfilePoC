@@ -33,17 +33,18 @@ output-folder: .
 > Profiles
 ``` yaml
 profile:
-  - two-profile
-  - one-profile
+  - v1.0-beta-profile
+  - v1.0-profile
+
 profiles:
-  one-profile:
+  v1.0-profile:
     resources:
-      users:
-        "beta": []
+      '*':
+        'v1.0': []
     operations: {}
-  two-profile:
+  v1.0-beta-profile:
     resources:
-      users:
-        "v1.0": []
+      '*':
+        'v1.0-beta': []
     operations: {}
 ```
