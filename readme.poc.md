@@ -32,12 +32,18 @@ output-folder: .
 
 > Profiles
 ``` yaml
-tag: all-api-versions
-require: $(this-folder)/profiles/readme.md
-api-version:
-  - v1.0
-  - beta
 profile:
-  - beta-profile
-  - v1.0-profile
+  - two-profile
+  - one-profile
+profiles:
+  one-profile:
+    resources:
+      users:
+        "beta": []
+    operations: {}
+  two-profile:
+    resources:
+      users:
+        "v1.0": []
+    operations: {}
 ```
